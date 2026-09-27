@@ -1,0 +1,102 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+  - "coursework/*"
+  - "data/*"
+
+book:
+  title: "MATH5702M Statistical Computing"
+  author: "Matthew Aldridge"
+  date: "09/28/26"
+  site-url: https://mpaldridge.github.io/math5702/
+  downloads: [pdf]
+  sidebar:
+    title: MATH5702
+  chapters:
+    - index.qmd
+    - part: "Monte Carlo estimation"
+      chapters:
+        - lectures/L01-mc-intro.qmd
+        - lectures/L02-mc-uses.qmd
+        - lectures/L03-mc-error-1.qmd
+        - lectures/L04-mc-error-2.qmd
+        - lectures/L05-cv.qmd
+        - lectures/L06-antithetic-1.qmd
+        - problems/P1.qmd
+#        - lectures/L07-antithetic-2.qmd
+#        - lectures/L08-is-1.qmd
+#        - lectures/L09-is-2.qmd
+#    - part: "Random number generation"
+#      chapters:
+#        - lectures/L10-rng-intro.qmd
+#        - lectures/L11-lcg.qmd
+#        - problems/P2.qmd
+#        - lectures/L12-uniform-discrete.qmd
+#        - lectures/L13-inverse.qmd
+#        - lectures/L14-rejection.qmd
+#        - lectures/L15-envelope-1.qmd
+#        - lectures/L16-envelope-2.qmd
+#        - problems/P3.qmd
+#    - part: "MCMC"
+#      chapters:
+#        - lectures/L17-markov-intro.qmd
+#        - lectures/L18-markov-longrun.qmd
+#        - lectures/L19-mh-1.qmd
+#        - lectures/L20-markov-cont.qmd
+#        - lectures/L21-mh-2.qmd
+#        - problems/P4.qmd
+#        - lectures/L22-mcmc-error.qmd
+#        - lectures/L23-bayes.qmd
+#    - part: "Resampling methods"
+#      chapters:
+#        - lectures/L24-empirical.qmd
+#        - lectures/L25-plugin.qmd
+#        - lectures/L26-bootstrap-error.qmd
+#        - lectures/L27-bootstrap-ci.qmd
+#        - problems/P5.qmd
+#    - lectures/L28-faq.qmd
+#    - coursework/coursework.qmd
+#    - problems/solutions.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: mystyle.css
+    include-before-body:
+      - text: |
+          <div class="hidden">
+          <p><span class="math display">\[ \newcommand{\Exg}{\operatorname{\mathbb{E}}} 
+          \newcommand{\Ex}{\mathbb{E}} 
+          \newcommand{\Ind}{\mathbb{I}}
+          \newcommand{\Var}{\operatorname{Var}}
+          \newcommand{\Cov}{\operatorname{Cov}}
+          \newcommand{\Corr}{\operatorname{Corr}}
+          \newcommand{\ee}{\mathrm{e}} \]</p>
+          </span></div>
+  pdf:
+    documentclass: scrreprt
+    include-in-header:
+      - text: |
+          \newcommand{\Exg}{\operatorname{\mathbb{E}}} 
+          \newcommand{\Ex}{\mathbb{E}} 
+          \newcommand{\Ind}{\mathbb{I}}
+          \newcommand{\Var}{\operatorname{Var}}
+          \newcommand{\Cov}{\operatorname{Cov}}
+          \newcommand{\Corr}{\operatorname{Corr}}
+          \newcommand{\ee}{\mathrm{e}}
+          \usepackage{comment}
+
+filters:
+  - diagram
+
+execute: 
+  cache: true
+
+knitr:
+  opts_chunk: 
+    fig-format: svg
+    code-summary: "Code for drawing this graph"
+
+
+

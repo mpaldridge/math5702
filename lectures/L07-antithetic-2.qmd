@@ -1,0 +1,125 @@
+# Antithetic variables II
+
+{{< include ../_header.qmd >}}
+
+
+## Error with antithetic variables
+
+Recall from last time the antithetic variables Monte Carlo estimator. We take sample pairs
+$$ (X_1, X'_1), (X_2, X'_2), \dots, (X_{n/2}, X_{n/2}') , $$
+where samples are independent between different pairs but *not* independent within the same pair. The estimator of $\theta = \Exg \phi(X)$ is
+$$ \widehat{\theta}_n^{\mathrm{AV}} = \frac{1}{n} \sum_{i=1}^{n/2} \big(\phi(X_i) + \phi(X'_i) \big) .$$
+We hope this is better than the standard Monte Carlo estimator if $\phi(X)$ and $\phi(X')$ are negatively correlated.
+
+::: {#thm-AVerr}
+Let $X$ be a random variable, $\phi$ a function, and $\theta = \Exg\phi(X)$. Let $X'$ have the same distribution as $X$, and write $\rho = \operatorname{Corr}(\phi(X_i),\phi(X'_i))$. Let $$ \widehat{\theta}_n^{\mathrm{AV}} = \frac{1}{n} \sum_{i=1}^{n/2} \big(\phi(X_i) + \phi(X_i')\big) $$ be the antithetic variables Monte Carlo estimator of $\theta$. Then:
+
+1.  $\widehat{\theta}_n^{\mathrm{AV}}$ is unbiased, in that $\operatorname{bias}\big(\widehat{\theta}_n^{\mathrm{AV}}\big) = 0$.
+
+2.  The variance of of $\widehat{\theta}_n^{\mathrm{AV}}$ is $$ \operatorname{Var}\big(\widehat{\theta}_n^{\mathrm{AV}}\big) = \frac{1}{2n} \operatorname{Var}\big(\phi(X) + \phi(X')\big) = \frac{1+\rho}{n}\Var\big(\phi(X)\big). $$
+
+3.  The mean-square error of $\widehat{\theta}_n^{\mathrm{AV}}$ is $$ \operatorname{MSE}\big(\widehat{\theta}_n^{\mathrm{AV}}\big) = \frac{1}{2n} \operatorname{Var}\big(\phi(X) + \phi(X')\big) = \frac{1+\rho}{n}\Var\big(\phi(X)\big). $$
+
+4.  The root-mean-square error of $\widehat{\theta}_n^{\mathrm{AV}}$ is $$ \operatorname{RMSE}\big(\widehat{\theta}_n^{\mathrm{AV}}\big) = \frac{1}{\sqrt{2n}} \sqrt{\operatorname{Var}\big(\phi(X) + \phi(X')\big)} = \frac{\sqrt{1+\rho}}{\sqrt{n}}\sqrt{\Var\big(\phi(X)\big)}. $$
+:::
+
+In points 2, 3 and 4, generally the first expression, involving the variance $\operatorname{Var}(\phi(X) + \phi(X'))$, is the most convenient for computation. We can estimate this easily from data using the sample variance in the usual way (as we will in the examples below).
+
+The second expression, involving the correlation $\rho$, is usually clearer for understanding. Comparing these to the same results for the standard Monte Carlo estimator (@thm-MCerr), we see that the antithetic variables method is an improvement (that is, has a smaller mean-square error) when $\rho < 0$, but is worse when $\rho > 0$. This proves that negative correlation improves our estimator.
+
+::: {.proof}
+For unbiasedness, we have
+$$ \Ex \widehat{\theta}_n^{\mathrm{AV}} = \Ex \left(\frac{1}{n} \sum_{i=1}^{n/2} \big(\phi(X_i) + \phi(X_i')\big)\right) = \frac{1}{n} \,\frac{n}{2} \big(\Exg\phi(X) + \Exg \phi(X')) = \frac{1}{2}(\theta+ \theta) = \theta ,$$
+since $X'$ has the same distribution as $X$.
+
+For the other three points, each of the first expressions follows straightforwardly in essentially the same way. (You can fill in the details yourself, if you need to.) For the second expressions, we have
+\begin{align*}
+\Var \big(\phi(X) + \phi(X')\big)
+&= \Var\big(\phi(X)\big) + \Var\big(\phi(X')\big) + 2\operatorname{Cov}\big(\phi(X),\phi(X')\big) \\
+&= \Var\big(\phi(X)\big) + \Var\big(\phi(X')\big) + 2\rho\sqrt{\Var\big(\phi(X)\big) \Var\big(\phi(X')\big)} \\
+&= \Var\big(\phi(X)\big) + \Var\big(\phi(X)\big) + 2\rho\sqrt{\Var\big(\phi(X)\big) \Var\big(\phi(X)\big)} \\
+&= 2(1+\rho)\Var\big(\phi(X)\big) .
+\end{align*}
+The results then follow.
+:::
+
+Let's return to the two examples we tried last time.
+
+::: {#exm-MCprob5}
+{{< include ../examples/L07-1-MCprob5.qmd >}}
+:::
+
+::: {#exm-AV}
+{{< include ../examples/L07-2-AVunif2.qmd >}}
+:::
+
+
+## Finding antithetic variables
+
+Antithetic variables can provide a huge advantage compared to standard Monte Carlo, as we saw in the second example above. The downside is that it can often be difficult to *find* an appropriate antithetic variable.
+
+To even be able to *try* the antithetic variables method, we need to find a random variable $X'$ with the same distribution as $X$ that isn't merely an independent copy. Both the examples we have seen of this use a symmetric distribution; that is, a distribution $X$ such that $X' = a - X$ has the same distribution as $X$, for some $a$.
+
+* We saw that if $X \sim \operatorname{N}(0, 1)$ is a standard normal distribution, then $X' = -X \sim \operatorname{N}(0, 1)$ too. More generally, if $X\sim \operatorname{N}(\mu, \sigma^2)$, then $X' = 2\mu - X \sim \operatorname{N}(\mu, \sigma^2)$ can be tried as an antithetic variable.
+
+* We saw that if $U \sim \operatorname{U}[0, 1]$ is a continuous uniform distribution on $[0,1]$, then $U' = 1-U \sim \operatorname{U}[0, 1]$ too. More generally, if $X\sim \operatorname{U}[a, b]$, then $X' = (a + b) - X \sim \operatorname{U}[a, b]$ can be tried as an antithetic variable.
+
+Later, when we study the inverse transform method (in Lecture 13) we will see another, more general, way to generate antithetic variables.
+
+But to be a *good* antithetic variable, we need $\phi(X)$ and $\phi(X')$ to be negatively correlated too -- preferably strongly so. Often, this is a matter of trial-and-error -- it's difficult to set out hard principles. But there are some results that try to formalise the idea that "nice functions of negatively correlated random variables are themselves negatively correlated", which can be useful. We give one example of such a result here.
+
+::: {#thm-neg}
+Let $U \sim \operatorname{U}[0, 1]$ and $V = 1 - U$. Let $\phi$ be a monotonically increasing function. Then $\phi(U)$ and $\phi(V)$ are negatively correlated, in that $\operatorname{Cov}\big(\phi(U), \phi(V)\big) \leq 0$.
+:::
+
+I didn't get to this proof in the lecture and it's a bit tricky (although not very technically deep), so let's say it's non-examinable.
+
+::: {.proof}
+*[Non-examinable]*  You probably already know two different expressions for the covariance:
+$$ \operatorname{Cov}(Y, Z) = \Exg (Y - \mu_Y)(Z - \mu_Z) = \Exg YZ - \mu_Y \mu_Z . $$
+But for this proof it will be helpful to use a third, less well-known equation:
+$$ \operatorname{Cov}(Y, Z) = \tfrac12 \Exg (Y - Y')(Z - Z') , $$
+where $(Y', Z')$ is an IID copy of $(Y, Z)$.
+
+To see that this third expression is true, we can start by expanding out the brackets. We get
+$$ \tfrac12 \Exg (Y - Y')(Z - Z')  = \tfrac12 \big( \Exg YZ - \Exg YZ' - \Exg Y'Z + \Exg Y'Z' \big) . $$
+We have four terms to deal with. The first has no dashed variables, so can stay as it is. The second and third terms have one dashed and one non-dashed variable, so these are independent, and we can write $\Exg YZ' = \Exg Y'Z = \mu_Y \mu_Z$. The fourth term has both terms dashed, but these have the same distribution as if they were non-dashed, so $\Exg Y'Z' = \Exg YZ$. All together, we have
+$$ \tfrac12 \Exg (Y - Y')(Z - Z') = \tfrac12 \big(2\Exg YZ - 2\mu_Y\mu_Z \big) = \Exg YZ - \mu_Y\mu_Z , $$
+which is indeed the second expression for the covariance.
+
+We can now apply this to the theorem in question. Put $Y = \phi(U)$ and $Z = \phi(1-U)$, and introduce an IID copy $V$ of $U$, so $Y' = \phi(V)$ and $Z' = \phi(1 - V)$. Then we have
+$$  \operatorname{Cov}\big(\phi(U), \phi(V)\big) = \tfrac 12 \Exg \big(\phi(U) - \phi(V)\big)\big(\phi(1-U) - \phi(1-V)\big) .$$
+
+We now claim that this expectation is negative. In fact, we have a stronger result: $$\big(\phi(U) - \phi(V)\big)\big(\phi(1-U) - \phi(1-V)\big)$${#eq-cross}
+is *always* negative, so its expectation certainly is. To see this, think separately of the two cases $U \leq V$ and $V \leq U$.
+
+* If $U \leq V$, then $\phi(U) \leq \phi(V)$ too, since $\phi$ is increasing. But, also this means that $1-U \geq 1-V$, so $\phi(1 - U) \geq \phi(1-V)$. This means that, in @eq-cross, the first term is negative and the second term is positive, so the product is negative.
+
+* If $V \leq U$, then $\phi(V) \leq \phi(U)$ too, since $\phi$ is increasing. But, also this means that $1-V \geq 1-U$, so $\phi(1 - V) \geq \phi(1-U)$. This means that, in @eq-cross, the first term is positive and the second term is negative, so the product is negative.
+
+This completes the proof.
+:::
+
+
+## A note on sample size comparisons
+
+Throughout these two lectures, when using antithetic pairs, we have taken $n/2$ pairs of samples. This is because that means we have $n/2 \times 2 = n$ samples all together, which seems like a fair comparison to usual Monte Carlo with $n$ samples.
+This is certainly the case if generating the sample and generating its antithetic pair cost roughly the same in terms of time (or energy, or money). This is always how we will compare methods in this module.
+
+However, if generating the first variate of each pair is slow, but then generating the second antithetic variate is much quicker, it might be a fairer comparison to take a full $n$ pairs. This could happen if we use a complicated method (like we will discover later in the module) for generating the $X$, but then the $X'$ is something similar like $X' = -X$. You could even consider more complicated ways of assessing the "cost" of Monte Carlo estimation, by assigning different costs to generating the original sample and to the antithetic pair, and also a cost to applying the function $\phi$; but  we won't get into that here.
+
+
+**Next time:** *We come to the third, and most important, variance reduction scheme: importance sampling.*
+
+::: {.mysummary}
+**Summary:**
+
+* The antithetic variables estimator is unbiased and has mean-square error
+$$ \operatorname{MSE}\big(\widehat{\theta}_n^{\mathrm{AV}}\big) = \frac{1}{2n} \operatorname{Var}\big(\phi(X) + \phi(X')\big) = \frac{1+\rho}{n}\Var\big(\phi(X)\big). $$
+
+* If $U \sim \operatorname{U}[0, 1]$ and $\phi$ is monotonically increasing, then $\phi(U)$ and $\phi(1-U)$ are negatively correlated.
+
+On Thursday's lecture, we will be discussing your answers to [**Problem Sheet 1**](#P1).
+
+**Read more:** [Voss, *An Introduction to Statistical Computing*](https://leeds.primo.exlibrisgroup.com/permalink/44LEE_INST/1fj430b/cdi_askewsholts_vlebooks_9781118728031), Subsection 3.3.2.
+:::

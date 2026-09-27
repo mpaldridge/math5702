@@ -1,0 +1,22 @@
+Suppose we want to approximate the integral $$ \int_0^2 x^{1.6} (2-x)^{0.7} \, \mathrm{d}x . $$
+
+Since this is an integral on the finite interval $[0,2]$, it would seem to make sense to pick $X$ to be uniform on $[0,2]$. This means we should take $$\phi(x) = \frac{h(x)}{f(x)} = (2-0)h(x) = 2\,x^{1.6}(2-x)^{0.7}.$$ We can then approximate this integral in R using the Monte Carlo estimator $$ \int_0^2 x^{1.6} (2-x)^{0.7} \, \mathrm{d}x = \operatorname{\mathbb{E}} \phi(X) \approx \frac{1}{n} \sum_{i=1}^n 2\,X_i^{1.6} (2-X_i)^{0.7} . $$
+
+```{r}
+n <- 1e6
+integrand <- function(x) x^1.6 * (2 - x)^0.7
+a <- 0
+b <- 2
+samples <- runif(n, a, b)
+mean((b - a) * integrand(samples))
+```
+
+You have perhaps noticed that, here and elsewhere, I tend to split my R code up into lots of small bits, perhaps slightly unnecessarily. After all, those 6 lines of code could simply have been written as just 2 lines
+
+```{r}
+#| eval = FALSE
+samples <- runif(1e6, 0, 2)
+mean(2 * samples^1.6 * (2 - samples)^0.7)
+```
+
+There's nothing *wrong* with that. However, I find that code is easier to read if divided into small pieces. It also makes it easier to tinker with, if I want to use it to solve some similar but slightly different problem.
