@@ -9,10 +9,9 @@ editor:
 {{< include ../_header.qmd >}}
 
 ::: {.mysummary}
-A "Probability and statistics background: self-test" is available on Minerva. This test consists of 10 short numerical answer or multiple choice questions. I recommend taking this test to assess your background preparation for MATH5702 -- but this is not compulsory, and it is not officially marked for credit.
+A **"Probability and statistics background: self-test"** is available on Minerva. This test consists of 10 short numerical answer or multiple choice questions. I recommend taking this test to assess your background preparation for MATH5702 -- but this is not compulsory, and it is not officially marked for credit.
 :::
 
-<!--
 
 Today, we'll start the first main topic of the module, which is called
 "Monte Carlo estimation". But first, a bit about the subject as a whole.
@@ -31,7 +30,7 @@ for anything but the simplest "toy models" -- but rather by running the
 model many times on a computer. From these many simulations, we can
 observe and measure things like the typical (or "expected") behaviour,
 the spread (or "variance") of the behaviour, and other things. This
-concept of simulation is at the heart of the module MATH5835M
+concept of simulation is at the heart of the module MATH5702M
 Statistical Computing.
 
 In particular, we will look at **Monte Carlo** estimation. Monte Carlo
@@ -66,7 +65,7 @@ important method of finding out about a population by using resampling
 from a dataset is called the "bootstrap", and we will study the
 bootstrap in detail.
 
-MATH5835M Statistical Computing is a *mathematics* module that will
+MATH5702M Statistical Computing is a *mathematics* module that will
 concentrate on the *mathematical* ideas that underpin statistical
 computing. It is not a programming module that will go deeply into the
 practical issues of the most efficient possible coding of the algorithms
@@ -171,7 +170,6 @@ this material and explore further!
 **Next time:** *We look at more examples of things we can estimate using
 the Monte Carlo method.*
 
--->
 
 ::: mysummary
 **Summary:**

@@ -34,7 +34,7 @@ Attendance at lectures in compulsory. You should record your attendance using th
 
 * Please only use a tablet/iPad in lectures if using it to make notes on the lecture.
 
-* **New rule for 2026:** *Please do not use laptops during the lecture*
+* *New rule for 2026: Please do not use laptops during the lecture*
   * If you need a laptop for accessibility reasons, this is OK, but please let me know (by email or before/after a lecture).
   * If you are the world's fastest LaTeX-typer and you make notes on the lecture on your laptop, this is OK, but please let me know  (by email or before/after a lecture).
   * I will hold a poll on this after two weeks -- if you all hate the policy, I'll change it back.
@@ -66,15 +66,15 @@ The deadline for the coursework will be the last-but-two day of the Autumn term,
 
 I will run an optional "office hours" drop-in session each week for feedback and consultation. You can come along if you want to talk to me about anything on the module, including if you'd like more feedback on your attempts at problem sheet questions. (For extremely short queries, you can approach me before or after lectures, but my response will often be: "Come to my office hours, and we can discuss it there!")
 
-Office hours will happen on **Thursdays from 1300 to 1400** -- so directly after the Thursday lecture / problems class -- in my office, which is **EC Stoner 9.10n** in "Maths Research Deck" area on the 9th floor of the EC Stoner building. (One way to the Maths Research Deck is via the doors directly opposite the main entrance to the School of Mathematics; you can also get there from Staircase 1 on the Level 10 "red route" through EC Stoner, next to the Maths Satellite.) If you cannot make this time, contact me for an alternative arrangement.
+Office hours will happen on **Thursdays from 1200 to 1300** -- so directly after the Thursday @ 11 lecture / problems class -- in my office, which is **MRD 9.10n** in "Maths Research Deck" area on the 9th floor of the EC Stoner building. (One way to the Maths Research Deck is via the doors directly opposite the main entrance to the School of Mathematics; you can also get there from Staircase 1 on the Level 10 "red route" through EC Stoner, next to the Maths Satellite.) If you cannot make this time, contact me for an alternative arrangement.
 
 ### Exam
 
 There will be one exam, which will make up 80% of your module mark.
 
-The exam will be in the January 2026 exam period (11--22 January); the date and time will be announced in December. The exam will be in person and on campus.
+The exam will be in the January 2027 exam period (11--22 January); the date and time will be announced in December. The exam will be in person and on campus.
 
-The exam will last 2 hours and 30 minutes. The exam will consist of 4 questions, all compulsory. You will be allowed to use a permitted calculator in the exam.
+The exam will last 2 hours and 30 minutes. The exam will consist of 4 questions, all compulsory. The exam is a "pen and paper" exam, but you will be allowed to use a permitted calculator in the exam.
 
 ## Content of MATH5702
 
@@ -93,7 +93,7 @@ Some knowledge I will assume:
 This module will also include an material on Markov chains. I won't assume any pre-existing knowledge of this, and I will introduce all new material we need, but students who have studied Markov chains before (for example in the Leeds module MATH2702 Stochastic Processes / MATH2750 Introduction to Markov Processes) may find a couple of lectures here are merely a reminder of things they already know.
 
 ::: {.mysummary}
-A "Probability and statistics background: self-test" is available on Minerva. This test consists of 10 short numerical answer or multiple choice questions. I recommend taking this test to assess your background preparation for MATH5702 -- but this is not compulsory, and it is not officially marked for credit.
+A **"Probability and statistics background: self-test"** is available on Minerva. This test consists of 10 short numerical answer or multiple choice questions. I recommend taking this test to assess your background preparation for MATH5702 -- but this is not compulsory, and it is not officially marked for credit.
 
 I expect most students who are well prepared for MATH5702 should get full, or nearly full, marks on this test on the first attempt. If you score 6 or less, I recommend spending significant time revising your basic probability and statistics, and (if you are not on MSc Statistics) you may want to discuss with me whether you think MATH5702 is the right module for you.
 :::
