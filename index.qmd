@@ -92,6 +92,12 @@ Some knowledge I will assume:
 
 This module will also include an material on Markov chains. I won't assume any pre-existing knowledge of this, and I will introduce all new material we need, but students who have studied Markov chains before (for example in the Leeds module MATH2702 Stochastic Processes / MATH2750 Introduction to Markov Processes) may find a couple of lectures here are merely a reminder of things they already know.
 
+::: {.mysummary}
+A "Probability and statistics background: self-test" is available on Minerva. This test consists of 10 short numerical answer or multiple choice questions. I recommend taking this test to assess your background preparation for MATH5702 -- but this is not compulsory, and it is not officially marked for credit.
+
+I expect most students who are well prepared for MATH5702 should get full, or nearly full, marks on this test on the first attempt. If you score 6 or less, I recommend spending significant time revising your basic probability and statistics, and (if you are not on MSc Statistics) you may want to discuss with me whether you think MATH5702 is the right module for you.
+:::
+
 The lectures will include examples using the **R** program language. The coursework and problem sheets will require use of R. The exam, while just a "pencil and paper" exam, will require understanding and writing short portions of R code. We will assume basic R capability -- that you can enter R commands, store R objects using the `<-` assignment, and perform basic arithmetic with numbers and vectors. Other concepts will be introduced as necessary. If you want to use R on your own device, I recommend downloading (if you have not already) the [R programming language](https://cran.r-project.org) and the [program RStudio](https://posit.co/downloads/). (These lecture notes were written in R using RStudio.)
 
 ### Syllabus

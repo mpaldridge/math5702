@@ -8,6 +8,10 @@ editor:
 
 {{< include ../_header.qmd >}}
 
+::: {.mysummary}
+A "Probability and statistics background: self-test" is available on Minerva. This test consists of 10 short numerical answer or multiple choice questions. I recommend taking this test to assess your background preparation for MATH5702 -- but this is not compulsory, and it is not officially marked for credit.
+:::
+
 <!--
 
 Today, we'll start the first main topic of the module, which is called

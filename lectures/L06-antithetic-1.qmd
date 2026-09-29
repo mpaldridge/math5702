@@ -75,6 +75,8 @@ Are these antithetic variables estimates an improvement on the basic Monte Carlo
 * For antithetic variables Monte Carlo estimation, we take pairs of non-independent variables $(X, X')$, to get the estimator
 $$ \widehat{\theta}_n^{\mathrm{AV}} = \frac{1}{n} \sum_{i=1}^{n/2} \big(\phi(X_i) + \phi(X'_i) \big) . $$
 
-On [**Problem Sheet 1**](#P1), you should now be able to answer all questions. You should work through this problem sheet in advance of the problems class on *Thursday 16 October*.
-
 **Read more:** [Voss, *An Introduction to Statistical Computing*](https://leeds.primo.exlibrisgroup.com/permalink/44LEE_INST/1fj430b/cdi_askewsholts_vlebooks_9781118728031), Subsection 3.3.2.
+:::
+
+
+On [**Problem Sheet 1**](#P1), you should now be able to answer all questions. You should work through this problem sheet in advance of the problems class on *Thursday 15 October* @ 11.
