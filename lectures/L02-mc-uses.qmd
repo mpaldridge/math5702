@@ -94,6 +94,8 @@ where $X_1, X_2, \dots, X_n$ are a random sample from $X$.
 {{< include ../examples/L02-3-MCint2.qmd >}}
 :::
 
+We will come back to the idea of "picking a distribution that concentrates on the most important values of $x$" later, in Lectures 8 and 9, when we talk about "importance sampling".
+
 
 **Next time:** *We will analyse the accuracy of these Monte Carlo estimates.*
 
