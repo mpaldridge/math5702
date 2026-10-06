@@ -2,7 +2,6 @@
 
 {{< include ../_header.qmd >}}
 
-<!--
 
 ## Recap
 
@@ -18,7 +17,7 @@ We saw that these themselves can be estimated as $S^2/n$ and $S/\sqrt{n}$ respec
 
 So far, we have described our error tolerance in terms of the MSE or RMSE. But we could have talked about "confidence intervals" or "margins of error" instead. This might be easier to understand for non-mathematicians, for whom "root-mean-square error" doesn't really mean anything.
 
-Here, we will want to appeal to the central limit theorem approximation. A bit more probability revision: Let $Y_1, Y_2, \dots$ be IID again, with expectation $\mu$ and variance $\sigma^2$. Write $\overline Y_n$ for the mean. We've already reminded ourselves of the law of large numbers, which says that $\overline Y_n \to \mu$ as $n \to infty$. Then in the last lecture we saw that $\mathbb E \overline Y_n = \mu$  and $\Var(\overline{Y}_n) = \sigma^2/n$. The **central limit theorem** says that the distribution of $\overline Y_n$ is approximately normally distributed with those parameters, so $\overline Y_n \approx \operatorname{N}(\mu, \sigma^2/n)$ when $n$ is large. (This is an informal statement of the central limit theorem: you probably know some more formal ways to more precisely state it, but this will do for us.)
+Here, we will want to appeal to the central limit theorem approximation. A bit more probability revision: Let $Y_1, Y_2, \dots$ be IID again, with expectation $\mu$ and variance $\sigma^2$. Write $\overline Y_n$ for the mean. We've already reminded ourselves of the law of large numbers, which says that $\overline Y_n \to \mu$ as $n \to \infty$. Then in the last lecture we saw that $\mathbb E \overline Y_n = \mu$  and $\Var(\overline{Y}_n) = \sigma^2/n$. The **central limit theorem** says that the distribution of $\overline Y_n$ is approximately normally distributed with those parameters, so $\overline Y_n \approx \operatorname{N}(\mu, \sigma^2/n)$ when $n$ is large. (This is an informal statement of the central limit theorem: you probably know some more formal ways to more precisely state it, but this will do for us.)
 
 Recall that, in the normal distribution $\operatorname{N}(\mu, \sigma^2)$, we expect to be within $1.96$ standard deviations of the mean with 95% probability. More generally, the interval $[\mu - q_{1-\alpha/2}\sigma, \mu + q_{1-\alpha/2}\sigma]$, where $q_{1-\alpha/2}$ is the $(1- \frac{\alpha}{2})$-quantile of the normal distribution, contains the true value with probability approximately $1 - \alpha$.
 
@@ -69,7 +68,6 @@ More samples take more time, and cost more energy and money. Wouldn't it be nice
 
 **Next time:** *We begin our study of clever "variance reduction" methods for Monte Carlo estimation.* 
 
--->
 
 ::: {.mysummary}
 **Summary:**
