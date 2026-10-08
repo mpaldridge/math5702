@@ -1,6 +1,6 @@
 We return to @exm-control, where we were estimating $\Ex \cos(X)$ for $X \sim \operatorname{N}(0,1)$.
 
-The naive Monte Carlo estimate had mean-square and root-mean-square error
+The naive Monte Carlo estimate had mean-square and root-mean-square error are
 
 ```{r}
 n <- 1e6

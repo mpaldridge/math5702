@@ -30,7 +30,10 @@ legend(
 
 Not only that, but we know that for $Y \sim \operatorname{N}(\mu, \sigma^2)$ we have $\Ex Y^2 = \mu^2 + \sigma^2$. So $$ \Exg \psi(X) = \Exg \left(1 - \frac{X^2}{2} \right) = 1 - \frac{\Ex X^2}{2} = 1 - \frac{0^2 + 1}{2} = \frac12 . $$
 
-So our control variate estimate is:
+So our control variate estimate is
+$$ \hat\theta_n^{\mathrm{CV}} = \frac{1}{n} \sum_{i=1}^n \bigg({\cos X_i} - \Big(1 - \frac{X_i^2}{2}\Big)\bigg) + \frac12 . $$
+
+In R, this is:
 
 ```{r}
 psi <- function(x) 1 - x^2 / 2
