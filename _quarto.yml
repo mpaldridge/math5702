@@ -24,13 +24,13 @@ book:
         - lectures/L05-cv.qmd
         - lectures/L06-antithetic-1.qmd
         - problems/P1.qmd
-#        - lectures/L07-antithetic-2.qmd
-#        - lectures/L08-is-1.qmd
-#        - lectures/L09-is-2.qmd
-#    - part: "Random number generation"
-#      chapters:
-#        - lectures/L10-rng-intro.qmd
-#        - lectures/L11-lcg.qmd
+        - lectures/L07-antithetic-2.qmd
+        - lectures/L08-is-1.qmd
+        - lectures/L09-is-2.qmd
+    - part: "Random number generation"
+      chapters:
+        - lectures/L10-rng-intro.qmd
+        - lectures/L11-lcg.qmd
 #        - problems/P2.qmd
 #        - lectures/L12-uniform-discrete.qmd
 #        - lectures/L13-inverse.qmd

@@ -1,5 +1,7 @@
 # Generating random numbers
 
+<!--
+
 ::: {.mysummary}
 Please complete the [**mid-semester survey**](https://forms.office.com/e/T1s1md6Jxi).
 :::
@@ -90,6 +92,7 @@ So PRNGs are quick and cheap. If they are designed well and started from a truly
 
 **Next time:** *We'll take a closer look at pseudorandom number generation using linear congruential generators.*
 
+-->
 
 ::: {.mysummary}
 **Summary:**

@@ -26,14 +26,34 @@
   </url>
   <url>
     <loc>https://mpaldridge.github.io/math5702/lectures/L06-antithetic-1.html</loc>
-    <lastmod>2026-10-08T12:42:12.107Z</lastmod>
+    <lastmod>2026-10-13T13:35:02.877Z</lastmod>
   </url>
   <url>
     <loc>https://mpaldridge.github.io/math5702/problems/P1.html</loc>
     <lastmod>2026-09-29T00:08:48.753Z</lastmod>
   </url>
   <url>
+    <loc>https://mpaldridge.github.io/math5702/lectures/L07-antithetic-2.html</loc>
+    <lastmod>2026-10-13T13:35:17.533Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mpaldridge.github.io/math5702/lectures/L08-is-1.html</loc>
+    <lastmod>2026-10-13T13:16:59.878Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mpaldridge.github.io/math5702/lectures/L09-is-2.html</loc>
+    <lastmod>2026-10-13T13:17:13.874Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mpaldridge.github.io/math5702/lectures/L10-rng-intro.html</loc>
+    <lastmod>2026-10-13T13:17:36.279Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mpaldridge.github.io/math5702/lectures/L11-lcg.html</loc>
+    <lastmod>2026-10-13T13:26:05.645Z</lastmod>
+  </url>
+  <url>
     <loc>https://mpaldridge.github.io/math5702/MATH5702M-Statistical-Computing.pdf</loc>
-    <lastmod>2026-10-07T23:50:03.164Z</lastmod>
+    <lastmod>2026-10-13T13:35:48.673Z</lastmod>
   </url>
 </urlset>
