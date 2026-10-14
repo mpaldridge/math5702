@@ -2,7 +2,7 @@
 
 {{< include ../_header.qmd >}}
 
-<!--
+
 
 ## Error with antithetic variables
 
@@ -112,7 +112,6 @@ However, if generating the first variate of each pair is slow, but then generati
 
 **Next time:** *We come to the third, and most important, variance reduction scheme: importance sampling.*
 
--->
 
 
 ::: {.mysummary}
