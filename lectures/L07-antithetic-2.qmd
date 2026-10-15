@@ -24,7 +24,9 @@ Let $X$ be a random variable, $\phi$ a function, and $\theta = \Exg\phi(X)$. Let
 4.  The root-mean-square error of $\widehat{\theta}_n^{\mathrm{AV}}$ is $$ \operatorname{RMSE}\big(\widehat{\theta}_n^{\mathrm{AV}}\big) = \frac{1}{\sqrt{2n}} \sqrt{\operatorname{Var}\big(\phi(X) + \phi(X')\big)} = \frac{\sqrt{1+\rho}}{\sqrt{n}}\sqrt{\Var\big(\phi(X)\big)}. $$
 :::
 
-In points 2, 3 and 4, generally the first expression, involving the variance $\operatorname{Var}(\phi(X) + \phi(X'))$, is the most convenient for computation. We can estimate this easily from data using the sample variance in the usual way (as we will in the examples below).
+In points 2, 3 and 4, generally the first expression, involving the variance $\operatorname{Var}(\phi(X) + \phi(X'))$, is the most convenient for computation. We can estimate this easily from data using the sample variance in the usual way, using the sample variance of $\phi(X) + \phi(X')$,
+$$ S^2 = \frac{1}{n/2-1} \sum_{i=1}^{n/2} \big(\phi(X_i) + \phi(X'_i) - 2\hat\theta^{\mathrm{AV}}_n\big)^2 . $$
+See the examples below to see this done in R.
 
 The second expression, involving the correlation $\rho$, is usually clearer for understanding. Comparing these to the same results for the standard Monte Carlo estimator (@thm-MCerr), we see that the antithetic variables method is an improvement (that is, has a smaller mean-square error) when $\rho < 0$, but is worse when $\rho > 0$. This proves that negative correlation improves our estimator.
 

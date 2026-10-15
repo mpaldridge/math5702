@@ -281,6 +281,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Solutions</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -437,6 +443,9 @@ display: none !important;
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>&nbsp;&nbsp;&nbsp;&nbsp;[<span class="dv">1</span>] <span class="fl">0.01416</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The statistician wants to get the root-mean-square error of her estimator down to <span class="math inline">\(10^{−4}\)</span>. Approximately how many samples will she need for the full study? Explain your answer.</p>
+<div class="myanswers">
+<p><em>Solution.</em> We know that the root-mean-square error is <span class="math inline">\(\epsilon\)</span>, where <span class="math display">\[ \epsilon = \frac{1}{\sqrt{n}} \sqrt{\operatorname{Var}\big(\phi(X)\big)} , \]</span> so <span class="math display">\[ n = \frac{1}{\epsilon^2} \operatorname{Var}\big(\phi(X)\big) . \]</span> Using <span class="math inline">\(\epsilon = 10^{-4}\)</span> and using the sample variance to estimate the variance, this suggests <span class="math display">\[ n = \frac{1}{(10^{-4})^2} \times 0.01416 = 1.416 \times 10^6 = 1\,416\,000 . \]</span></p>
+</div>
 </div>
 <div class="myq">
 <p><strong>5.</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let <span class="math inline">\(h(x) = 1/(x + 0.1)\)</span>. We wish to estimate <span class="math inline">\(\int_0^5 h(x) \, \mathrm{d}x\)</span> using a Monte Carlo method.</p>

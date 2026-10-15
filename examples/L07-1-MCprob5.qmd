@@ -10,7 +10,7 @@ MC_MSE <- var(samples > 2) / n
 c(MCest, sqrt(MC_MSE))
 ```
 
-We then used $Z' = -Z$ as an antithetic variable. its root-mean-square error are
+We then used $Z' = -Z$ as an antithetic variable. Its estimate and its root-mean-square error are
 
 ```{r}
 n <- 1e6
@@ -21,10 +21,12 @@ AV_MSE <- var((samples1 > 2) + (samples2 > 2)) / (2 * n)
 c(AVest, sqrt(AV_MSE))
 ```
 
-This looked like it made very little difference -- perhaps a small improvement. This can be confirmed by looking at the sample correlation with R's `cor()` function.
+In the penultimate line, we calculated the sample variance of $\phi(X) + \phi(X')$ with ` var((samples1 > 2) + (samples2 > 2))`, then divided it by $2n$, as in @thm-AVerr above.
+
+Using antithetic variables looked like it made very little difference -- perhaps a tiny improvement? This can be confirmed by looking at the sample correlation with R's `cor()` function.
 
 ```{r}
 cor(samples1 > 2, samples2 > 2)
 ```
 
-We see there was a very small but negative correlation: the variance, and hence the mean-square error, was reduced by about 2%.
+We see there was a very small but negative correlation: the variance, and hence the mean-square error, was reduced by about 2%, so the root-mean-square error by about 1%.

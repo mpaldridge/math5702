@@ -112,6 +112,15 @@ distribution with rate 4. The statistician begins with a pilot study, as shown i
 ```
 
             The statistician wants to get the root-mean-square error of her estimator down to $10^{−4}$. Approximately how many samples will she need for the full study? Explain your answer.
+
+::::{.myanswers data-latex=""}
+*Solution.* We know that the root-mean-square error is $\epsilon$, where
+$$ \epsilon = \frac{1}{\sqrt{n}} \sqrt{\operatorname{Var}\big(\phi(X)\big)} , $$
+so
+$$ n = \frac{1}{\epsilon^2} \operatorname{Var}\big(\phi(X)\big) . $$
+Using $\epsilon = 10^{-4}$ and using the sample variance to estimate the variance, this suggests
+$$ n = \frac{1}{(10^{-4})^2} \times 0.01416 = 1.416 \times 10^6 = 1\,416\,000 . $$
+::::
 :::::
 
 ::::: {.myq}

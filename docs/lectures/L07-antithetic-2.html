@@ -281,6 +281,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Solutions</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -343,7 +349,7 @@ window.Quarto = {
 <li><p>The root-mean-square error of <span class="math inline">\(\widehat{\theta}_n^{\mathrm{AV}}\)</span> is <span class="math display">\[ \operatorname{RMSE}\big(\widehat{\theta}_n^{\mathrm{AV}}\big) = \frac{1}{\sqrt{2n}} \sqrt{\operatorname{Var}\big(\phi(X) + \phi(X')\big)} = \frac{\sqrt{1+\rho}}{\sqrt{n}}\sqrt{\Var\big(\phi(X)\big)}. \]</span></p></li>
 </ol>
 </div>
-<p>In points 2, 3 and 4, generally the first expression, involving the variance <span class="math inline">\(\operatorname{Var}(\phi(X) + \phi(X'))\)</span>, is the most convenient for computation. We can estimate this easily from data using the sample variance in the usual way (as we will in the examples below).</p>
+<p>In points 2, 3 and 4, generally the first expression, involving the variance <span class="math inline">\(\operatorname{Var}(\phi(X) + \phi(X'))\)</span>, is the most convenient for computation. We can estimate this easily from data using the sample variance in the usual way, using the sample variance of <span class="math inline">\(\phi(X) + \phi(X')\)</span>, <span class="math display">\[ S^2 = \frac{1}{n/2-1} \sum_{i=1}^{n/2} \big(\phi(X_i) + \phi(X'_i) - 2\hat\theta^{\mathrm{AV}}_n\big)^2 . \]</span> See the examples below to see this done in R.</p>
 <p>The second expression, involving the correlation <span class="math inline">\(\rho\)</span>, is usually clearer for understanding. Comparing these to the same results for the standard Monte Carlo estimator (<a href="L03-mc-error-1.html#thm-MCerr" class="quarto-xref">Theorem&nbsp;<span>3.2</span></a>), we see that the antithetic variables method is an improvement (that is, has a smaller mean-square error) when <span class="math inline">\(\rho &lt; 0\)</span>, but is worse when <span class="math inline">\(\rho &gt; 0\)</span>. This proves that negative correlation improves our estimator.</p>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>For unbiasedness, we have <span class="math display">\[ \Ex \widehat{\theta}_n^{\mathrm{AV}} = \Ex \left(\frac{1}{n} \sum_{i=1}^{n/2} \big(\phi(X_i) + \phi(X_i')\big)\right) = \frac{1}{n} \,\frac{n}{2} \big(\Exg\phi(X) + \Exg \phi(X')) = \frac{1}{2}(\theta+ \theta) = \theta ,\]</span> since <span class="math inline">\(X'\)</span> has the same distribution as <span class="math inline">\(X\)</span>.</p>
@@ -369,7 +375,7 @@ window.Quarto = {
 <pre><code>[1] 0.0226410000 0.0001487562</code></pre>
 </div>
 </div>
-<p>We then used <span class="math inline">\(Z' = -Z\)</span> as an antithetic variable. its root-mean-square error are</p>
+<p>We then used <span class="math inline">\(Z' = -Z\)</span> as an antithetic variable. Its estimate and its root-mean-square error are</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fl">1e6</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>samples1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n <span class="sc">/</span> <span class="dv">2</span>)</span>
@@ -381,14 +387,15 @@ window.Quarto = {
 <pre><code>[1] 0.0226120000 0.0001469334</code></pre>
 </div>
 </div>
-<p>This looked like it made very little difference – perhaps a small improvement. This can be confirmed by looking at the sample correlation with R’s <code>cor()</code> function.</p>
+<p>In the penultimate line, we calculated the sample variance of <span class="math inline">\(\phi(X) + \phi(X')\)</span> with <code>var((samples1 &gt; 2) + (samples2 &gt; 2))</code>, then divided it by <span class="math inline">\(2n\)</span>, as in <a href="#thm-AVerr" class="quarto-xref">Theorem&nbsp;<span>7.1</span></a> above.</p>
+<p>Using antithetic variables looked like it made very little difference – perhaps a tiny improvement? This can be confirmed by looking at the sample correlation with R’s <code>cor()</code> function.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(samples1 <span class="sc">&gt;</span> <span class="dv">2</span>, samples2 <span class="sc">&gt;</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -0.02313508</code></pre>
 </div>
 </div>
-<p>We see there was a very small but negative correlation: the variance, and hence the mean-square error, was reduced by about 2%.</p>
+<p>We see there was a very small but negative correlation: the variance, and hence the mean-square error, was reduced by about 2%, so the root-mean-square error by about 1%.</p>
 </div>
 <div id="exm-AV" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7.2</strong></span> In <a href="L06-antithetic-1.html#exm-AVunif" class="quarto-xref">Example&nbsp;<span>6.2</span></a>, we were estimating <span class="math inline">\(\mathbb E \sin U\)</span>, where <span class="math inline">\(U\)</span> is continuous uniform on <span class="math inline">\([0,1]\)</span>.</p>
