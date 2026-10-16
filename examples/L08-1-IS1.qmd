@@ -11,7 +11,7 @@ for (i in 1:10) MCest[i] <- mean(rnorm(n) > 4)
 MCest
 ```
 
-We see a big range of values. I get different results each time I run it, but anything between $1 \times 10^{-5}$ and $8 \times 10^{-5}$, and even $0$, comes out fairly regularly as the estimate. The problem is that $X > 4$ is a very rare event -- it only comes out a handful of times (perhaps 0 to 8) out of the 100,000 samples. This means our estimate is (on average) quite inaccurate.
+We see a big range of values. I get different results each time I run it, but anything between $1 \times 10^{-5}$ and $8 \times 10^{-5}$, and even $0$, comes out fairly regularly as the estimate. The problem is that $X > 4$ is a very rare event -- it only comes out a handful of times (perhaps 0 to 8) out of the 100,000 samples. This means our estimate is (on average) quite inaccurate. More specifically, it has a very large *relative error*.
 
 It would be better not to sample from $X$, but rather to sample from a distribution that is greater than 4 a better proportion of the time. We could try anything for this distribution $Y$, but to keep things simple, I'm going to stick with a normal distribution with standard deviation 1. I'll want to increase the mean, though, so that we sample values bigger than 4 more often. Let's try importance sampling with $Y \sim \operatorname{N}(4,1)$.
 
