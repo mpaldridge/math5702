@@ -5,7 +5,7 @@
 Please complete the [**mid-semester survey**](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3ywARQdZlKXRHsLcXi_ngX8NUMVJKT0taVDMzN0NNU0RBWDcwRU85UUVOSi4u).
 :::
 
-<!--
+
 
 ## Why generate random numbers?
 
@@ -95,7 +95,7 @@ So PRNGs are quick and cheap. If they are designed well and started from a truly
 
 **Next time:** *We'll take a closer look at pseudorandom number generation using linear congruential generators.*
 
--->
+
 
 ::: {.mysummary}
 **Summary:**
