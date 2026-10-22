@@ -268,11 +268,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="mysummary">
+<p>Please complete the <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3ywARQdZlKXRHsLcXi_ngX8NUMVJKT0taVDMzN0NNU0RBWDcwRU85UUVOSi4u"><strong>mid-semester survey</strong></a>.</p>
+</div>
 <!--
-
-::: {.mysummary}
-Please complete the [**mid-semester survey**](https://forms.office.com/e/T1s1md6Jxi).
-:::
 
 ## Why generate random numbers?
 
@@ -298,9 +297,9 @@ We start by considering the question of how to generate a uniform random number 
 
 The first thing to know is that computers do not perfectly store exact real numbers in decimals of unending length -- that's impossible! Instead, it stores a number to a certain accuracy, in terms of the number of decimal places. To be more precise, computers store numbers in *binary*; that is, written as a sequence of 0s and 1s. These 0s and 1s are called "binary digits", or **bits**, for short. (In the presentation here, we will somewhat simplify matters -- computer science experts will be able to spot where I'm lying, or "gently smoothing out the truth".)
 
-A number between 0 and 1 could be (approximately) stored as a 32-bit binary number, for example. A 32-bit number is a number like
+A number between 0 and 1 could be (approximately) stored as a 32-bit or 64-bit binary number, for example. A 32-bit number is a number like
 ```
-0. 00110100 11110100 10001111 10011001
+    0. 00110100 11110100 10001111 10011001
 ```
 that is "0." followed by a string of 32 binary digits.
 A string $0.x_1x_2\cdots x_{31}x_{32}$ represents the number
@@ -313,7 +312,7 @@ We could generate such a 32-bit (or, more generally, $b$-bit) number in two diff
 * A sequence of 32 0s and 1s (each being 50:50 likely to be 0 or 1 and each being independent of the others). This then represents a number in its binary expansion, as above.
    * Or, more generally, we want a string of $b$ 0s and 1s. 
 
-* A integer at random between $0$ and $2^{32} - 1$, which we can then divide by $2^{32}$ to get a number between $0$ and $1$.
+* A integer at random between $0$ and $2^{32} - 1$, which we can then divide by $2^{32}$ to get a number between $0$ and $1$. Dividing a number by $2^32$ is the same as "shifting the decimal point (or, rather, binary point) 32 places to the left".
    * Or, more generally, we want a random integer between $0$ and $m - 1$ for some $m$, which we can then divide by $m$. Usually $m = 2^b$ for some $b$, to give a $b$-bit number.
 
 There are two ways we can do this. First, we can use **true physical randomness**. Second, we can use **computer-generated "pseudorandomness"**.
@@ -343,7 +342,9 @@ One example of such a function $f$ would be $f(x) = (ax+c) \bmod m$, so $x_{i+1}
 
 R's default method is of this form -- well, it's *almost* a recurrence of the form $x_{i+1} = f(x_i)$. It actually uses a method called the [Mersenne Twister](https://en.wikipedia.org/wiki/Mersenne_Twister), which uses a recurrence of the form $x_{i+1} = (g(x_i) + i) \bmod m$ for a complicated function $g$; here the "plus $i$", where $i$ is the step number, means we have a slightly different update rule each timestep.
 
-But how do we pick the seed -- the starting point $x_1$? Normally, we use some true physical randomness to pick the seed. The benefit here is that just a small amount of true physical randomness can "start you off" by choosing the seed, and then the PRNG can produces huge amounts of pseudorandomness incredibly quickly. Indeed, that's what the wall of lava lamps in the video did -- the lava lamps were just for producing lots of seeds for the PRNGs.
+But how do we pick the seed -- the starting point $x_1$?
+
+One choice is to use some true physical randomness to pick the seed. The benefit here is that just a small amount of true physical randomness can "start you off" by choosing the seed, and then the PRNG can produces huge amounts of pseudorandomness incredibly quickly. Indeed, that's what the wall of lava lamps in the video did -- the lava lamps were just for producing lots of seeds for the PRNGs.
 
 However, it is possible, and sometimes desirable, to set the seed "by hand". This is useful if you want to produce the same "random-looking" numbers as someone else (or yourself, previously). This is because if two people set the same seed $x_1$, then the numbers $x_2, x_3, \dots$ produced after that will still appear to be random, but because the process is completely deterministic after the seed is chosen, both people will actually produce exactly the same sequence of numbers. This can be useful for checking accuracy of code, for example, or ensuring "reproducible analysis".
 
