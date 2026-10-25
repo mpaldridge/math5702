@@ -1,6 +1,6 @@
 # LCGs
 
-<!--
+
 
 ## Definition and examples
 
@@ -124,7 +124,7 @@ LCGs were considered state-of-the-art until the late-90s or so. However, it was 
 
 **Next time:** *We'll use our pseudorandom uniform $[0,1]$ random numbers to make random numbers with other discrete or uniform distributions.*
 
--->
+
 
 
 
