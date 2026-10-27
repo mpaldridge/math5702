@@ -2,6 +2,8 @@
 
 {{< include ../_header.qmd >}}
 
+<!--
+
 ## Rejection
 
 In the last two lectures, we have taken standard uniform $U \sim \operatorname{U}[0,1]$ random variables, and have applied a function to them to transform into some other distribution $X$. One $U$ gets turned into one $X$. (Or, for the Box--Muller transform, two $U$s become two $X$s.)
@@ -110,6 +112,23 @@ If the number of proposals $N$ is large and the unconditional acceptance probabi
 
 We have to be careful when the unconditional acceptance probability is very close to $0$. In that case, there can be a lot of variability required in either the (very small) number of accepted samples or the (very large) number of required proposals. This unpredictability is another reason to avoid rejection sampling where the unconditional acceptance probability $a$ is very small.
 
+-->
+
+**Next time.** *We look closer at rejection sampling, and in particular how we can target rejection sampling at a given distribution using the "envelope" method.*
+
+::: mysummary
+**Summary:**
+
+-   In rejection sampling, we accept a proposed sample $Y = x$ with probability $\alpha(x)$.
+
+-   If the PDF of a proposed sample is $g$, then the PDF of an accepted sample is proportional to $\alpha(x) \,g(x)$.
+
+-   When the acceptance probability is low, rejection sampling can require a lot of proposed samples to get enough accepted samples.
+
+**Read more:** [Voss, *An Introduction to Statistical Computing*](https://leeds.primo.exlibrisgroup.com/permalink/44LEE_INST/1fj430b/cdi_askewsholts_vlebooks_9781118728031), Subsections 1.4.1 and 1.4.3.
+:::
+
+
 <!--
 
 Let's first look at the **"fixed number of proposed samples"** case.
@@ -197,16 +216,3 @@ This shows the danger of running rejection sampling when the probability of acce
 (Annoyingly, R defines the geometric distribution to be the number of failures *before* the first success -- 1 less then our definition -- and the negative binomial to be the number of failures *before* the $n$th success -- $n$ less than our definition. This is why `n_acc + dnbinom()` was plotted for the two second graphs.)
 -->
 
-**Next time.** *We look closer at rejection sampling, and in particular how we can target rejection sampling at a given distribution using the "envelope" method.*
-
-::: mysummary
-**Summary:**
-
--   In rejection sampling, we accept a proposed sample $Y = x$ with probability $\alpha(x)$.
-
--   If the PDF of a proposed sample is $g$, then the PDF of an accepted sample is proportional to $\alpha(x) \,g(x)$.
-
--   When the acceptance probability is low, rejection sampling can require a lot of proposed samples to get enough accepted samples.
-
-**Read more:** [Voss, *An Introduction to Statistical Computing*](https://leeds.primo.exlibrisgroup.com/permalink/44LEE_INST/1fj430b/cdi_askewsholts_vlebooks_9781118728031), Subsections 1.4.1 and 1.4.3.
-:::

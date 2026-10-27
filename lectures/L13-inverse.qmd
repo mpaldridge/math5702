@@ -2,6 +2,7 @@
 
 {{< include ../_header.qmd >}}
 
+<!--
 
 ## Inverse CDF
 
@@ -208,7 +209,7 @@ This confirms that we get an excellent match to the normal distribution.
 
 **Next time:** *Sampling using rejection.*
 
-
+-->
 
 ::: mysummary
 **Summary:**

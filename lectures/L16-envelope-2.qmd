@@ -1,5 +1,6 @@
 # Envelope rejection sampling II
 
+<!--
 
 Last time we discussed envelope rejection sampling. The process was the following:
 
@@ -113,6 +114,7 @@ Then we discussed manipulating standard uniform samples into other distributions
 
 **Next time.** *We begin our study on MCMC: Markov chain Monte Carlo.*
 
+-->
 
 
 ::: mysummary
