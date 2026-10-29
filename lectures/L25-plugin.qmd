@@ -62,7 +62,7 @@ The **bootstrap** method is the following idea:
 2.  Repeat step 1 many times; let's say $B$ times. Keep taking $n$ of the samples with replacement and evaluating the statistic. We now have $B$ versions of that statistic $T^*_1, T^*_2, \dots, T^*_B$.
 
 3.  Use these $B$ versions of the statistic to get a **bootstrap estimate** of the expectation, variance, or prediction interval. To estimate the expectation of the statistic $\mathbb ET = \mathbb ET(X_1, \dots, X_n)$, use the sample mean of the evaluated statistics $\overline{T^*} = \frac{1}{B} \sum_{k=1}^B T^*_B$. To estimate the variance $\operatorname{Var}(T)$ use the sample variance
-$$ \sum{1}{B-1} \sum_{k=1}^B \big(T^*_k - \overline{T^*}\big) .$$
+$$ \frac{1}{B-1} \sum_{k=1}^B \big(T^*_k - \overline{T^*}\big) .$$
 We'll come back to the prediction interval next time.
 
 The bootstrap concept was discovered by the American statistician Bradley Efron in a hugely influential paper ["Bootstrap methods: another look at the jackknife"](https://doi.org/10.1214/aos/1176344552) in 1979. The name "bootstrap" comes from the phrase "to pull yourself up by your bootstraps", which roughly means to make progress without any outside help, in a way that might initially seem impossible -- similarly, the bootstrap manages to estimate properties of a statistic by just reusing the same set of samples over and over again. (The "jackknife" in the title of Efron's paper was and earlier, simpler, less powerful idea along similar lines, named after the multipurpose tool the jackknife.)

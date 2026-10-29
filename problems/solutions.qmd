@@ -6,14 +6,14 @@
 {{< include P1-content.qmd >}}
 :::
 
-<!--
+
 ## Problem Sheet 2 {.unnumbered #P2-sols}
 
 ::: {.content-visible when-format="html"}
 {{< include P2-content.qmd >}}
 :::
 
-
+<!--
 ## Problem Sheet 3 {.unnumbered #P3-sols}
 
 ::: {.content-visible when-format="html"}
