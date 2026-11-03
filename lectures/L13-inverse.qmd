@@ -2,7 +2,7 @@
 
 {{< include ../_header.qmd >}}
 
-<!--
+
 
 ## Inverse CDF
 
@@ -51,7 +51,8 @@ where we have simply "undone" the function $F^{-1}$ and used that $\mathbb P(U \
 
 For the general case, we need to be just a little bit more careful. We have
 $$ \mathbb P(X \leq x) = \mathbb P\big(F^{-1}(U) \leq x\big) = \mathbb P\big(\min\{y : F(y) \geq U \} \leq x \big) .$$
-If $x$ is bigger than the minimum $y$ with $F(y) \geq u$, then certainly $F(x) \geq u$ as well; while if $F(x) \geq u$, then $x$ must be at least as big as the minimum $y$ for which $F(y) \geq u$. Hence $\min\{y : F(y) \geq U \} \leq x$ if and only if $F(x) \geq U$. So
+Since $F$ is increasing, if $x \geq \min\{y: F(y) \geq U\}$, then $F(x) \geq F(y) \geq U$, also. Similarly, if $F(x) \geq U$, then $x$ must be at least as big as the minimum $y$ such that $F(y) \geq U$. Hence $x \geq \min\{y: F(y) \geq U\}$ is equivalent to $F(x) \geq U$.
+So
 $$ \mathbb P(X \leq x) = \mathbb P\big(\min\{y : F(y) \geq U \} \leq x \big) = \mathbb P\big(F(x) \geq U\big) = \mathbb P(U \leq F(x)\big) = F(x), $$
 as before.
 :::
@@ -148,6 +149,7 @@ For $0 \leq U < \leq F(1) = \tfrac13$, we have $U = \tfrac13 X^3$, so $X = \sqrt
 $$ X = \begin{cases} \sqrt[3]{3U} & U \leq \frac13 \\ \tfrac32 U + \tfrac12 & U > \tfrac13 . \end{cases} $$
 :::
 
+<!--
 
 ## Box--Muller transform
 
@@ -207,9 +209,10 @@ curve(dnorm(x), add = TRUE, col = "blue", lwd = 2)
 
 This confirms that we get an excellent match to the normal distribution.
 
+-->
+
 **Next time:** *Sampling using rejection.*
 
--->
 
 ::: mysummary
 **Summary:**
