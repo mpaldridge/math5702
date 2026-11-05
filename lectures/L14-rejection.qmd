@@ -2,7 +2,7 @@
 
 {{< include ../_header.qmd >}}
 
-<!--
+
 
 ## Rejection
 
@@ -70,7 +70,7 @@ Well, using Bayes' theorem, we have in the discrete case $$\mathbb P(X = x) = \m
 ::: {#exm-normcos}
 Suppose we wish to sample from the distribution $$ f(x) \propto \exp\big(-\tfrac12x^2\big)\,(\sin^2 x) .$$ {#eq-distprop} How can we do this?
 
-Well, we can note that the PDF of the standard normal is $$ g(x) = \frac{1}{2\pi}\,\exp\big(-\tfrac12x^2\big) \propto \exp\big(-\tfrac12x^2\big) $$ and that $$ 0 \leq \sin^2x\leq 1 .$$ (Here, $\sin^2 x$ means $(\sin x)^2$, by the way.) This means that, if we take proposals $Y \sim \operatorname{N}(0,1)$, and then accept an proposed sample with probability $\alpha(x) = \sin^2 x$, that will give us the distribution @eq-distprop.
+Well, we can note that the PDF of the standard normal is $$ g(x) = \frac{1}{\sqrt{2\pi}}\,\exp\big(-\tfrac12x^2\big) \propto \exp\big(-\tfrac12x^2\big) $$ and that $$ 0 \leq \sin^2x\leq 1 .$$ (Here, $\sin^2 x$ means $(\sin x)^2$, by the way.) This means that, if we take proposals $Y \sim \operatorname{N}(0,1)$, and then accept an proposed sample with probability $\alpha(x) = \sin^2 x$, that will give us the distribution @eq-distprop.
 
 ```{r}
 n_prop <- 1e6
@@ -85,7 +85,7 @@ curve(
 )
 ```
 
-By rejecting lots of proposals with values near 0, we turned the unimodal ("one hump")proposal distribution $Y \sim \operatorname{N}(0,1)$ into this interesting bimodal ("two hump") distribution.
+By rejecting lots of proposals with values near 0, we turned the unimodal ("one hump") proposal distribution $Y \sim \operatorname{N}(0,1)$ into this interesting bimodal ("two hump") distribution.
 
 Let's explain line 3 more carefully. We want to accept a proposal $x$ with probability $\sin^2 x$. We saw in Lecture 12 that we can simulate a Bernoulli$(p)$ distribution by taking the value 1 is $U \leq p$ and taking 0 if $U > p$. So in line 3, we are accepting each proposed sample $x_i$ if a standard uniform variate $u_i$ satisfies $u_i \leq \sin^2 x_i$.
 
@@ -112,7 +112,7 @@ If the number of proposals $N$ is large and the unconditional acceptance probabi
 
 We have to be careful when the unconditional acceptance probability is very close to $0$. In that case, there can be a lot of variability required in either the (very small) number of accepted samples or the (very large) number of required proposals. This unpredictability is another reason to avoid rejection sampling where the unconditional acceptance probability $a$ is very small.
 
--->
+
 
 **Next time.** *We look closer at rejection sampling, and in particular how we can target rejection sampling at a given distribution using the "envelope" method.*
 

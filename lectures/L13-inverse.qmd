@@ -149,7 +149,6 @@ For $0 \leq U < \leq F(1) = \tfrac13$, we have $U = \tfrac13 X^3$, so $X = \sqrt
 $$ X = \begin{cases} \sqrt[3]{3U} & U \leq \frac13 \\ \tfrac32 U + \tfrac12 & U > \tfrac13 . \end{cases} $$
 :::
 
-<!--
 
 ## Box--Muller transform
 
@@ -209,7 +208,7 @@ curve(dnorm(x), add = TRUE, col = "blue", lwd = 2)
 
 This confirms that we get an excellent match to the normal distribution.
 
--->
+
 
 **Next time:** *Sampling using rejection.*
 
