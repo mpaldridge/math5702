@@ -1,6 +1,6 @@
 # Markov chains in continuous space
 
-
+<!--
 ## Markov chains with densities
 
 In the last three lectures, we have looked at Markov chains and the Metropolis--Hastings algorithm on a discrete state space $\mathcal S$. This allowed us to form Markov chain Monte Carlo (MCMC) estimators for discrete random variables. But very often we want to sample from continuous random variables. So in the next two lectures we will look at Markov chains and Metropolis--Hastings in continuous space. (We are still in discrete time, though.)
@@ -61,7 +61,7 @@ A stationary density $\pi$ is a PDF on $\mathcal S$ (so $\pi(x) \geq 0$ and $\in
 
 
 **Next time.** *We will study the Metropolis--Hastings algorithm in continuous space.*
-
+-->
 ::: mysummary
 **Summary:**
 

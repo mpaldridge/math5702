@@ -1,5 +1,5 @@
 # Metropolis--Hastings in discrete space
-
+<!--
 
 ## The Metropolis--Hastings algorithm
 
@@ -150,7 +150,7 @@ If, on the other hand $$\frac{\pi(x)\,r(x,y)}{\pi(y)\,r(y,x)} \leq 1 \qquad\text
 
 
 **Next time.** *We will start our study of MCMC in continuous space by giving an overview of the theory of Markov chains in continuous space.*
-
+-->
 ::: mysummary
 **Summary:**
 

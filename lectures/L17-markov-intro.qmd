@@ -2,6 +2,8 @@
 
 {{< include ../_header.qmd >}}
 
+
+<!--
 ## Markov chains and MCMC
 
 In the first part of this module, we looked at Monte Carlo methods, where we estimated $\theta = \Exg\phi(X)$ by $$ \widehat{\theta}_n = \frac{1}{n} \sum_{i=1}^n \phi(X_i) $$. To do this, we need samples $X_1, X_2, \dots, X_n$ that (a) come from the exactly the same distribution as $X$, and (b) are independent of each other.
@@ -34,7 +36,7 @@ The schedule will be:
 
 -   Lectures 22 and 23: MCMC in practice (including for Bayesian statistics).
 
-Some of you may have studied Markov chains before -- for example, in the Leeds second-year module [MATH2750 Introduction to Markov Processes](https://mpaldridge.github.io/math2750/). If so, you should find that today and the next lecture are just a brief reminder of things you already know, but the rest of the material is likely to be new. However, I will not assume any pre-existing knowledge of Markov chains, and will teach you everything you need to know for this module.
+Some of you may have studied Markov chains before -- for example, in the Leeds second-year modules MATH2702 Stochastic Processes or [MATH2750 Introduction to Markov Processes](https://mpaldridge.github.io/math2750/). If so, you should find that today and the next lecture are just a brief reminder of things you already know, but the rest of the material is likely to be new. However, I will not assume any pre-existing knowledge of Markov chains, and will teach you everything you need to know for this module.
 
 
 ## Introduction to Markov chains
@@ -174,6 +176,7 @@ for (i in 1:7) {
 
 **Next time.** *We continue our whistle-stop tour of discrete-space Markov chains.*
 
+-->
 
 ::: mysummary
 **Summary:**

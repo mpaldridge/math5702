@@ -1,5 +1,5 @@
 # Metropolis--Hastings in continuous space
-
+<!--
 
 ## The Metropolis--Hastings algorithm again
 
@@ -128,7 +128,7 @@ For that reason, it can often be useful to use a **burn-in period**. A burn-in p
 
 **Next time.** *We analyses the error of Monte Carlo estimation with the output of a Markov chain.*
 
-
+-->
 
 ::: mysummary
 **Summary:**
