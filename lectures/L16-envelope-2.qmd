@@ -1,6 +1,5 @@
 # Envelope rejection sampling II
 
-<!--
 
 Last time we discussed envelope rejection sampling. The process was the following:
 
@@ -86,6 +85,13 @@ curve(meas(x) / 14.3, add = TRUE, lwd = 2, col = "blue")
 We accepted about 31% of proposals.
 :::
 
+Sampling from distributions only known up to a constant is very important in Bayesian statistics. In Bayesian statistics, the posterior distribution is often known only up to proportionality. That's because we have \begin{align}
+\text{posterior} &\propto \text{prior}\times\text{likelihood} \\
+\pi(\theta \mid x) &\propto\, \pi(x) \times p(x \mid \theta)
+\end{align} It's often very difficult to find the normalising constant in this expression -- indeed, it can be impossible in practice. So being able to sample from such a posterior distribution without finding the constant is very important for Bayesian statisticians.
+
+We will come back to this idea when we study MCMC later in the module.
+
 ## Summary of Part II
 
 This completes our study of random number generation. This would be a good time to summarise what we have learned.
@@ -96,7 +102,7 @@ First we discussed generating randomness.
 
 -   LCGs are one type of pseudorandom number generator. An LCG is a recurrence $x_{n+1} = (ax_n + c) \bmod m$.
 
--   Conditions for an LCG to have full period of $m$ are given by the Hull--Dobell theorem: if $m$ is a power of 2, then we need $c$ to be odd and $a$ to be $1 \bmod 4$. [**Note:** *In the lecture, I wrongly said we need $c$ to be even; in fact, we need $c$ to be odd.*]
+-   Conditions for an LCG to have full period of $m$ are given by the Hull--Dobell theorem: if $m$ is a power of 2, then we need $c$ to be odd and $a$ to be $1 \bmod 4$. 
 
 Then we discussed manipulating standard uniform samples into other distributions.
 
@@ -114,7 +120,7 @@ Then we discussed manipulating standard uniform samples into other distributions
 
 **Next time.** *We begin our study on MCMC: Markov chain Monte Carlo.*
 
--->
+
 
 
 ::: mysummary

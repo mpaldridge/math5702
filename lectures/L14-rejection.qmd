@@ -94,10 +94,6 @@ In this example, we found we accepted about 430,000 samples.
 
 In this example, we managed to sample from the PDF in @eq-distprop, $$ f(x) = \frac{1}{Z}\,\exp\big(-\tfrac12x^2\big)\,(\sin^2 x) ,$$ even though we never found out what the normalising constant $Z$ was. This idea -- that we can sample from a distribution even if we only know it up to a multiplicative constant -- is a very important one that will come up a lot later in this module.
 
-We won't go into that idea deeply now, but we briefly mention that it is very important in Bayesian statistics. In Bayesian statistics, the posterior distribution is often known only up to proportionality. That's because we have \begin{align}
-\text{posterior} &\propto \text{prior}\times\text{likelihood} \\
-\pi(\theta \mid x) &\propto\, \pi(x) \times p(x \mid \theta)
-\end{align} It's often very difficult to find the normalising constant in this expression -- indeed, it can be impossible in practice. So being able to sample from such a posterior distribution without finding the constant is very important for Bayesian statisticians.
 
 ## How many samples?
 
