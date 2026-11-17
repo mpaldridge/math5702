@@ -3,7 +3,7 @@
 {{< include ../_header.qmd >}}
 
 
-<!--
+
 ## Markov chains and MCMC
 
 In the first part of this module, we looked at Monte Carlo methods, where we estimated $\theta = \Exg\phi(X)$ by $$ \widehat{\theta}_n = \frac{1}{n} \sum_{i=1}^n \phi(X_i) $$. To do this, we need samples $X_1, X_2, \dots, X_n$ that (a) come from the exactly the same distribution as $X$, and (b) are independent of each other.
@@ -176,7 +176,7 @@ for (i in 1:7) {
 
 **Next time.** *We continue our whistle-stop tour of discrete-space Markov chains.*
 
--->
+
 
 ::: mysummary
 **Summary:**
