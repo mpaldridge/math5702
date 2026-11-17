@@ -129,7 +129,7 @@ A quick word before we end about the <span style="color:red;">technical conditio
 
 * **<span style="color:red;">Positive recurrence</red>** is a highly technical condition we won't get into here.
 
-If you do want to read more about the theory of Markov chains, and these technical conditions in particular, I recommend my lecture notes for my notes for [MATH2750 Introduction to Markov Processes](https://mpaldridge.github.io/math2750/). This is entirely optional, though, and this knowledge is *not* required for this module and its exam.
+If you do want to read more about the theory of Markov chains, and these technical conditions in particular, I recommend my lecture notes for my notes for [MATH2750 Introduction to Markov Processes](https://mpaldridge.github.io/math2750/) (the predecessor of the current MATH2702 Stochastic Processes). This is entirely optional, though, and this knowledge is *not* required for this module and its exam.
 
 
 
