@@ -1,6 +1,6 @@
 # Markov chains in continuous space
 
-<!--
+
 ## Markov chains with densities
 
 In the last three lectures, we have looked at Markov chains and the Metropolis--Hastings algorithm on a discrete state space $\mathcal S$. This allowed us to form Markov chain Monte Carlo (MCMC) estimators for discrete random variables. But very often we want to sample from continuous random variables. So in the next two lectures we will look at Markov chains and Metropolis--Hastings in continuous space. (We are still in discrete time, though.)
@@ -57,11 +57,26 @@ We can find the two-step transition density $p^{(2)}(x, y)$ be integrating over 
 
 A stationary density $\pi$ is a PDF on $\mathcal S$ (so $\pi(x) \geq 0$ and $\int_{\mathcal S}\pi(x)\,\mathrm{d}x = 0$) such that $$ \pi(y) = \int_{\mathcal S} \pi(x) \,p(x,y) \,\mathrm{d}x \qquad \text{for all } y \in \mathcal S . $$ This is often easier to find by solving the detailed balance equations $$ \pi(y)\,p(y, x) = \pi(x)\,p(x, y) \qquad \text{for all } x,y \in \mathcal S . $$
 
-[Limit theorem]
+:: {#thm-ergodic}
+Let $(X_i)$ be a Markov chain on a continuous state space $\mathcal S$. Suppose that $(X_i)$ is <span style="color:red;">irreducible</span> and fulfils various other technical conditions we won't get into here.
+
+1. There exists a stationary distribution $\pi$, which is unique.
+
+2. **(Limit theorem)** $$\mathbb P(X_n \in a \mid X_1 = x) \to \int_A \pi(y) \, \mathrm dy$$ as $n \to \infty$ for all $A \subset \mathcal S$ , regardless of the starting state $X_1 = x$, where $\pi$ is the unique stationary distribution.
+
+3. **(Ergodic theorem, 1)** Write $$V_n(A) = \frac{1}{n} \big|\{i = 1, 2, \dots, n : X_i \in A\}\big|$$ for the proportion of the first $n$ steps spent in the set $A$. Then $V_n(A) \to \int_A \pi(x) \, \mathrm dx$ as $n \to \infty$ for all $A \subset \mathcal S$, regardless of the starting state $X_1$, where $\pi$ is the unique stationary distribution.
+
+4. **(Ergodic theorem, 2)** Let $\phi$ be a function on the state space $\mathcal S$. Let $X$ have probability density function $\pi$, where $\pi$ is the unique stationary distribution. Then $$ \frac{1}{n} \sum_{i=1}^n \phi(X_i) \to \operatorname{\mathbb E}\phi(X), $$ as $n \to \infty$, regardless of the starting state $X_1$.
+:::
+
+Again, it is this fourth point that is crucial to us. We can also do MCMC for continuous random variables. If $X$ is a continuous random variable with PDF $\pi$, we can perform Monte Carlo estimation using the output of a Markov chain in continuous space with stationary density $\pi$.
+
+Again, the term <span style="color:red;">irreducible</span> is telling we must be able to access all areas of the state space -- at least those areas where $\pi(x) > 0$. This can be important when running MCMC in practice.
 
 
 **Next time.** *We will study the Metropolis--Hastings algorithm in continuous space.*
--->
+
+
 ::: mysummary
 **Summary:**
 
