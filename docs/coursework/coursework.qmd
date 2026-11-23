@@ -3,11 +3,11 @@
 ::: {.mysummary}
 There is one piece of computational coursework for MATH5835M Statistical Computing. This coursework is worth 20% of the module mark.
 
-The coursework sheet is available in **[here in HTML format](https://mpaldridge.github.io/math5835/coursework/math5835-coursework.html)** or **<a href="https://mpaldridge.github.io/math5835/coursework/math5835-coursework.Rmd">here in R Markdown format</a>**.
+The coursework sheet is available in **[here in HTML format](https://mpaldridge.github.io/math5702/coursework/math5702-coursework.html)** or **<a href="https://mpaldridge.github.io/math5702/coursework/math5702-coursework.Rmd">here in R Markdown format</a>**.
 
-The deadline for the coursework will be the penultimate day of the Autumn term, **Thursday 11 December ** at **1400**. (There is also an optional deadline if you wish to get feedback on a draft of your work: Friday 5 December at 1400.)
+The deadline for the coursework will be the penultimate day of the Autumn term, **Thursday 10 December** at **1400**. (There is also an optional deadline if you wish to get feedback on a draft of your work: Friday 4 December at 1400.)
 
-Feedback on the final report and marks will be returned on Monday 12 January, the first day of the Spring term.
+Feedback on the final report and marks will be returned on Monday 11 January, the first day of the Spring term.
 :::
 
 ## About the coursework
@@ -16,19 +16,19 @@ There is one piece of computational coursework for MATH5835M Statistical Computi
 
 This page contains all the administrative and organisational information about the coursework.
 
-A coursework sheet contains the tasks you must carry out. The coursework sheet is available in **[here in HTML format](https://mpaldridge.github.io/math5835/coursework/math5835-coursework.html)** or **<a href="https://mpaldridge.github.io/math5835/coursework/math5835-coursework.Rmd">here in R Markdown format</a>**. The HTML page can be opened in a standard web browser. The R Markdown version (which I personally prefer) should be downloaded then opened in RStudio; I recommend using the "Visual" editor -- see the button in the top left of the editing window.
+A coursework sheet contains the tasks you must carry out. The coursework sheet is available in **[here in HTML format](https://mpaldridge.github.io/math5702/coursework/math5702-coursework.html)** or **<a href="https://mpaldridge.github.io/math5702/coursework/math5702-coursework.Rmd">here in R Markdown format</a>**. The HTML page can be opened in a standard web browser. The R Markdown version (which I personally prefer) should be downloaded then opened in RStudio; I recommend using the "Visual" editor -- see the button in the top left of the editing window.
 
 The are two deadlines for this work. 
 
-1. There is the **main submission deadline** which is the penultimate day of term, **Thursday 11 December** at **1400**. You must submit your work by this time. Work that is submitted after this deadline will receive a penalty of 5% for every day or part-day late. Work that is more than 14 days late will not be marked and will receive 0. Work will be submitted electronically through Gradescope via the Minerva page for the module.
+1. There is the **main submission deadline** which is the penultimate day of term, **Thursday 10 December** at **1400**. You must submit your work by this time. Work that is submitted after this deadline will receive a penalty of 5% for every day or part-day late. Work that is more than 14 days late will not be marked and will receive 0. Work will be submitted electronically through Gradescope via the Minerva page for the module.
 
-2. *Optionally*, you *may* also wish to get some brief informal feedback on your draft work before the main deadline. *If* you wish to get feedback on your draft work, you should submit that draft by Friday 6 December at 1400. I will return a small amount of general feedback about your work by Monday 9 December. I will not give a mark to your draft, and the feedback will be a brief sentence or too that may be of a little help when completing the final version of your work. The quality of your draft submission will have no effect (either positive or negative) on the mark for your main submission, and there is no penalty if you choose not to take advantage of this offer. You still must submit your final work by the main submission deadline, even if you submit a draft for feedback. No extensions can be offered on the deadline for this informal feedback.
+2. *Optionally*, you *may* also wish to get some brief informal feedback on your draft work before the main deadline. *If* you wish to get feedback on your draft work, you should submit that draft by Friday 4 December at 1400. I will return a small amount of general feedback about your work by Monday 9 December. I will not give a mark to your draft, and the feedback will just be a brief sentence or two that may be of a little help when completing the final version of your work. The quality of your draft submission will have no effect (either positive or negative) on the mark for your main submission, and there is no penalty if you choose not to take advantage of this offer. You still must submit your final work by the main submission deadline, even if you submit a draft for feedback. No extensions can be offered on the deadline for this informal feedback.
 
-The Gradescope submission for the final report will open after 1400 on Friday 6 December (to avoid drafts for optional feedback getting mixed up with final reports). The Gradescope submission for optional feedback on draft work will be open from the computer practical sessions in week 9.
+The Gradescope submission for the final report will open from Monday 7 (to avoid drafts for optional feedback getting mixed up with final reports). The Gradescope submission for optional feedback on draft work will be open shortly after the computer practical sessions in week 9.
 
-You must comply with [the University's rules on academic integrity](https://students.leeds.ac.uk/info/10110/academic-integrity). [See below](#AI) for comments on use of AI.
+You must comply with [the University's rules on academic integrity](https://students.leeds.ac.uk/academic-integrity). [See below](#AI) for comments on use of AI.
 
-If you encounter extraordinary unforeseeable personal circumstances that make it impossible for you to submit your coursework on time, you can apply for an deadline extension through [the usual mitigating circumstances procedure](https://students.leeds.ac.uk/info/10111/assessment/860/mitigating_circumstances). (Do not contact me about this -- I cannot unilaterally offer deadline extensions.)
+If you encounter extraordinary unforeseeable personal circumstances that make it impossible for you to submit your coursework on time, you can apply for an deadline extension through [the usual mitigating circumstances procedure](https://students.leeds.ac.uk/assessments/doc/mitigating-circumstances). (Do not contact me about this -- I cannot unilaterally offer deadline extensions.)
 
 ## About your report
 
@@ -42,38 +42,48 @@ I call your output a "report" because your work should be explained in detail, i
 
 There is *no page limit* for the report, although I expect that good reports will typically be around 5--8 pages. If your report is 4 pages or less, make sure you have completed all the tasks and fully explained your work. If your report has 10 pages or more, make sure you are not wandering from the point or including too many unnecessary figures.
 
-Your report should be prepared electronically, but can be submitted in any sensible format -- I recommend PDF (whether produced by LaTeX, R Markdown, Microsoft Word, or any other way), but HTML or Word document are fine too.
+Your report should be prepared electronically using the one of the following methods and submitted as follow:
+
+* **LaTeX**: submit both the PDF document and also the .tex source. (It is not necessary to submit extra files such as pictures.)
+
+* **R Markdown**, **Quarto** and similar: submit both the PDF or HTML document and also the Markdown (.Rmd or .qmd) source.
+
+* **Microsoft Word**: Word document (.docx).
+
+I ask you to submit the source files so I can easily check that your code runs as it should.
 
 ## Computer practical and other help
 
-There will be a computer practical in Week 9 where I will introduce the practical coursework in more detail. This is a good place to ask any questions you have about the coursework. You may wish to bring your own laptop to the computer practical, if you prefer working on that to on University computers.
+There will be two computer practicals in Week 9 where I will introduce the practical coursework in more detail. This is a good place to ask any questions you have about the coursework. You may wish to bring your own laptop to the computer practical, if you prefer working on that to on University computers.
 
 Places where you can get help with the coursework include:
 
 * In the computer practical session.
 
-* In my office hours: Thursdays 1300--1400 in my office, 9.10n in the "Maths Research Deck" area on the 9th floor of the EC Stoner building at staircase 1. (It is unlikely I will have time to discuss computational work at the beginning or end of a lecture, although if your question is *extremely* short you can try.)
+* In my office hours: Thursdays 1200--1300 in my office, 9.10n in the "Maths Research Deck" area on the 9th floor of the EC Stoner building at staircase 1. (It is unlikely I will have time to discuss computational work at the beginning or end of a lecture, although if your question is *extremely* short you can try.)
 
 * By submitting your draft work for optional feedback, as discussed above.
 
 
 ## AI use
 
-This coursework is rated AMBER for use of AI. This means that generative AI may be used in an "assistive role" only, provided you disclose (that is, tell me about) this use.
+My preference is that you do not use AI for this coursework. The goal of this coursework is for you to learn how to solve longer problems using the computational ideas you have learned in the module. You will learn this most effectively if you do not use AI. My strong recommendation is not to use AI.
 
-The following uses of generative AI go beyond merely "assistive" and are **not permitted**. Work that I suspect has used generative AI this way will be reported as an academic integrity case.
+However, the University rules are that AI may be used -- but only in an "assistive role", and only provided you disclose (that is, tell me about) this use.
+
+The following uses of generative AI go beyond merely "assistive" and are **totally forbidden**.
 
 * Asking an LLM chatbot how to answer the questions on the problem sheet.
 
-* Writing R code for you.
+* Getting an LLM to write R code for you.
 
-* Writing the text of your report for you.
+* Getting an LLM to write the text of your report for you.
 
-The following uses of generative AI are only "assistive", and are permitted *provided you tell me that you used generative AI this way*. Work that uses AI this way, where the AI use *is* disclosed, will not be penalised in any way. Work that uses AI this way where the AI use is *not* disclosed will be treated as an academic integrity case.
+The following uses of generative AI are only "assistive", and are permitted *provided you tell me that you used generative AI this way*. Work that uses AI this way, where the AI use *is* disclosed, will not be penalised. Work that uses AI this way where the AI use is *not* disclosed will be treated as an academic integrity case.
 
 * General revision of topics from the module, not particularly tailored to the coursework problems.
 
-* Debugging almost-complete R code that you wrote yourself.
+* Help with debugging almost-complete R code that you wrote yourself.
 
 * Spell-checking and grammar-checking a report that you wrote yourself.
 
@@ -83,14 +93,15 @@ All reports must end with a **declaration of generative AI use**.
 
 * If you did not use generative AI at all, this can simply say: *"I did not use generative AI for the coursework project."*
 
-* If you did use generative AI, this should say what system you used, what tasks it performed, and how you prompted it. Declarations like these should be one paragraph long, typically around 40--100 words.
+* If you did use generative AI, this should say what system you used, what tasks it performed, and how you prompted it. Declarations like these should be detailed -- perhaps more detailed than you are used to in other work; declarations should be at least one paragraph long, and usually at least 50 words.
 
 For example, here are two hypothetical declarations:
 
-> **Declaration of generative AI use (1).** The only place I used AI in this coursework was to spell- and grammar-check my report. I uploaded my Word document to Copilot, and prompted it: "Please check this report for spelling and grammar mistakes." It found 5 small errors, which I corrected.
+> **Declaration of generative AI use (1).** The only place I used AI in this coursework was to spell- and grammar-check my report. I uploaded my Word document to Copilot, and prompted it: "Please check this report for spelling and grammar mistakes." It found 5 spelling mistakes, which I corrected.
 
 > **Declaration of generative AI use (2).** I used AI to help when I had a bug in my R code that I couldn't fix myself. I copy-and-pasted my R script into ChatGPT, along with the text of the error from RStudio, and asked ChatGPT what the error was. It pointed out that, in drawing a graph, I had written `col = blue` without quotation-marks around `"blue"`. This was the only time I used AI for the coursework.
 
+If (1) I think you may have used AI in a assistive role beyond being "assistive", (2) I think you may have used AI more than in your declaration, (3) your work contains no AI declaration or an insufficiently detailed declaration, then I will invite you to a short meeting where we can discuss your AI use before I mark your work.
 
 
 ## R and RStudio on University computers
@@ -101,6 +112,6 @@ A quick reminder, if you need it, on how to access R and RStudio on University c
 
 2. **Load the language R** Search on AppsAnywhere for "R for Windows" (or similar) and launch it. This will (silently) load the language R. It will also open an inferior RStudio-like program called "RGui" -- you can close it.
 
-3.**Launch RStudio** Search on AppsAnywhere for "RStudio" (or similar) and launch it.
+3. **Launch RStudio** Search on AppsAnywhere for "RStudio" (or similar) and launch it.
 
 You can alternatively use the [Posit Cloud](https://posit.cloud) to access R and RStudio online.

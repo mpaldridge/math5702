@@ -1,12 +1,12 @@
 ---
-title:  "MATH5835M Statistical Computing: Coursework sheet"
-author: "University of Leeds, 2024--25"
+title:  "MATH5702M Statistical Computing: Coursework sheet"
+author: "University of Leeds, 2026--27"
 output: html_document
 ---
 
-This sheet sets out the tasks for the computational coursework for MATH5835M Statistical Computing. You should write a short report on your solutions to these tasks. For administrative and other information about this coursework, see [the information in the lecture notes](https://mpaldridge.github.io/math5835/coursework/coursework.html).
+This sheet sets out the tasks for the computational coursework for MATH5702M Statistical Computing. You should write a short report on your solutions to these tasks. For administrative and other information about this coursework, see [the information in the lecture notes](https://mpaldridge.github.io/math5702/coursework/coursework.html).
 
-This coursework sheet is available in [HTML format](https://mpaldridge.github.io/math5835/coursework/math5835-coursework.html) or in [R Markdown format](https://mpaldridge.github.io/math5835/coursework/math5835-coursework.Rmd). The R Markdown file should be opened in RStudio; I recommend the "Visual" editor -- see the top-left of the editing window.
+This coursework sheet is available in [HTML format](https://mpaldridge.github.io/math5702/coursework/math5702-coursework.html) or in [R Markdown format](https://mpaldridge.github.io/math5702/coursework/math5702-coursework.Rmd). The R Markdown file should be opened in RStudio; I recommend the "Visual" editor -- see the top-left of the editing window.
 
 
 ## Part I: Windspeeds
@@ -99,7 +99,7 @@ The system is most likely to be found in a state with a high score. We model thi
 
 We wish to sample from this distribution using the Metropolis--Hastings algorithm in discrete space.
 
-> Suggest an appropriate proposal transition function on $\mathcal S = \{+1, -1\}^n$ for this Metropolis--Hastings algorithm. Remember that proposals should be random and should typically make only a small change to the state while keeping it in the state space.
+> Suggest an appropriate proposal transition function on $\mathcal{S} = \{+1, -1\}^n$ for this Metropolis--Hastings algorithm. Remember that proposals should be random and should typically make only a small change to the state while keeping it in the state space.
 
 > Calculate the acceptance probability for the Metropolis--Hastings algorithm with your proposal. Simplify this expression by using the structure of the probability mass function and of the score, if it is possible to do so.
 

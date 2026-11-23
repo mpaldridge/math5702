@@ -1,11 +1,11 @@
 # Metropolis--Hastings in continuous space
-<!--
+
 
 ## The Metropolis--Hastings algorithm again
 
 Last time, we looked at Markov chains $(X_i)$ in continuous space, as defined by a transition density $p(x, y)$. We saw (under certain technical conditions we didn't get into) that we have convergence to a unique stationary probability density $\pi$. We further saw that we have an ergodic theorem $$ \frac{1}{n} \sum_{i=1}^n \phi(X_i) \to \operatorname{\mathbb E}\phi(X) , $$ where $X$ has PDF $\pi$.
 
-As before, this opens up to us the possibility of MCMC: find a Markov chain with stationary distribution equal to the PDF you want to sample from, then use the output of the Markov chain as the samples in a Monte Carlo estimator. And, yet again, the Metropolis--Hastings algorithm gives us a way to find such a Markov chain. The continuous Metropolis--Hastings algorithm is essentially the same as the discrete time one, but with densities instead of probabilities.
+As before, this opens up to us the possibility of MCMC: find a Markov chain with stationary distribution equal to the PDF you want to sample from, then use the output of the Markov chain as the samples in a Monte Carlo estimator. And, yet again, the Metropolis--Hastings algorithm gives us a way to find such a Markov chain. The continuous Metropolis--Hastings algorithm is essentially the same as the discrete space one, but with densities instead of probabilities.
 
 ::: thpart
 -   We want to define a Markov chain on a continuous state space $\mathcal S$, which contains the range of the probability density function $\pi$ we want to sample from.
@@ -100,6 +100,7 @@ We saw here a general pattern when choosing the step size in a Gaussian random w
 You want to try and pick the "Goldilocks" step size -- not too small, and not too big! There is no perfect recipe you can follow to pick the ideal step size -- MCMC is an art as well as a science. If you are able to, it can be helpful to think about what typical values you hope to be sampling. In our example, ranges of between 0 and 30 or so are typical for $\operatorname{Exp}(0.1)$, so you want a step size that will explore such a range well without too regularly stepping outside of it. Our choice of $\sigma = 15$, being half of that $[0, 30]$ range seemed to do quite well.
 
 Some people consider a rule of thumb where the acceptance rate should be around 40--50% for one-dimensional (or low-dimensional) problems to be a good rule of thumb, decreasing towards 20--25% for higher dimensional problems; but this is only a guide, not a strict rule.  
+
 If one changes the code in the example above to keep track of the acceptance rate, one would see that with $\sigma = 1$, the acceptance rate is usually greater than 90%; with $\sigma = 400$. the acceptance rate is usually less than 5%; and with $\sigma = 1$, the acceptance rate is usually around 40 to 45%. This matches the rule of thumb.
 
 It's also worth doing short "pilot" runs, where you try different values of $\sigma$ and examine what seems to work best.
@@ -128,7 +129,6 @@ For that reason, it can often be useful to use a **burn-in period**. A burn-in p
 
 **Next time.** *We analyses the error of Monte Carlo estimation with the output of a Markov chain.*
 
--->
 
 ::: mysummary
 **Summary:**
