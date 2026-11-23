@@ -26,7 +26,7 @@ The are two deadlines for this work.
 
 The Gradescope submission for the final report will open from Monday 7 (to avoid drafts for optional feedback getting mixed up with final reports). The Gradescope submission for optional feedback on draft work will be open shortly after the computer practical sessions in week 9.
 
-You must comply with [the University's rules on academic integrity](https://students.leeds.ac.uk/academic-integrity). [See below](#AI) for comments on use of AI.
+You must comply with [the University's rules on academic integrity](https://students.leeds.ac.uk/academic-integrity) -- most importantly, you work must reflect your own efforts and your own understanding. [See below](#AI) for comments on use of AI.
 
 If you encounter extraordinary unforeseeable personal circumstances that make it impossible for you to submit your coursework on time, you can apply for an deadline extension through [the usual mitigating circumstances procedure](https://students.leeds.ac.uk/assessments/doc/mitigating-circumstances). (Do not contact me about this -- I cannot unilaterally offer deadline extensions.)
 
@@ -79,7 +79,7 @@ The following uses of generative AI go beyond merely "assistive" and are **total
 
 * Getting an LLM to write the text of your report for you.
 
-The following uses of generative AI are only "assistive", and are permitted *provided you tell me that you used generative AI this way*. Work that uses AI this way, where the AI use *is* disclosed, will not be penalised. Work that uses AI this way where the AI use is *not* disclosed will be treated as an academic integrity case.
+The following uses of generative AI are only "assistive", and are permitted *provided you tell me that you used generative AI this way* -- although, like I said, I do ot recommend it. Work that uses AI this way, where the AI use *is* disclosed, will not be penalised. Work that uses AI this way where the AI use is *not* disclosed will be treated as an academic integrity case.
 
 * General revision of topics from the module, not particularly tailored to the coursework problems.
 
