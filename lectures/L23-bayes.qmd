@@ -1,5 +1,5 @@
 # MCMC and Bayesian statistics
-
+<!--
 
 ## Bayesian set-up
 
@@ -125,7 +125,7 @@ Even more reliable can be to work on a log scale. We know that $a \times b$ can 
 In the second part of this module, we saw various ways to get exact IID samples from the exact distribution we want (in-built R functions, inverse transform method, Box--Muller transform, basic rejection sampling, envelope rejection sampling). In this third part of the module, we've only really seen one way in detail -- the random walk Metropolis algorithm -- and it produces non-independent samples from approximately the distribution we want. That description makes MCMC sound much worse!
 
 But MCMC using the random walk Metropolis algorithm has big advantages too.
-
+-->
 
 ::: mysummary
 **Summary:**

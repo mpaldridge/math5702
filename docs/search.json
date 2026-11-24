@@ -943,6 +943,28 @@
     ]
   },
   {
+    "objectID": "lectures/L22-mcmc-error.html",
+    "href": "lectures/L22-mcmc-error.html",
+    "title": "22  MCMC error",
+    "section": "",
+    "text": "\\[ \\newcommand{\\Exg}{\\operatorname{\\mathbb{E}}} \n\\newcommand{\\Ex}{\\mathbb{E}} \n\\newcommand{\\Ind}{\\mathbb{I}}\n\\newcommand{\\Var}{\\operatorname{Var}}\n\\newcommand{\\Cov}{\\operatorname{Cov}}\n\\newcommand{\\Corr}{\\operatorname{Corr}}\n\\newcommand{\\ee}{\\mathrm{e}} \\]\n\n\n\n\n\n\n\\[ \\]\n\n\n\nSummary:\n\nWe can analyse the error in Monte Carlo estimation with the output of a Markov chain by assuming it begins “in equilibrium”.\nMCMC is approximately unbiased and with MSE \\({\\displaystyle \\approx \\frac{\\sigma^2}{n} \\left(1 + 2 \\sum_{k = 1}^{\\infty} \\rho(k) \\right)}\\).\nWe want the autocorrelation \\(\\rho(k)\\) to decay as quickly as possible.\n\nRead more: Voss, An Introduction to Statistical Computing, Subsection 4.2.2.",
+    "crumbs": [
+      "MCMC",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>MCMC error</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/L23-bayes.html",
+    "href": "lectures/L23-bayes.html",
+    "title": "23  MCMC and Bayesian statistics",
+    "section": "",
+    "text": "\\[ \\newcommand{\\Exg}{\\operatorname{\\mathbb{E}}} \n\\newcommand{\\Ex}{\\mathbb{E}} \n\\newcommand{\\Ind}{\\mathbb{I}}\n\\newcommand{\\Var}{\\operatorname{Var}}\n\\newcommand{\\Cov}{\\operatorname{Cov}}\n\\newcommand{\\Corr}{\\operatorname{Corr}}\n\\newcommand{\\ee}{\\mathrm{e}} \\]\n\n\n\n\n\n\n\nSummary:\n\n\n\nRead more: Voss, An Introduction to Statistical Computing, Subsection ?.?.?.",
+    "crumbs": [
+      "MCMC",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>MCMC and Bayesian statistics</span>"
+    ]
+  },
+  {
     "objectID": "coursework/coursework.html",
     "href": "coursework/coursework.html",
     "title": "Computational coursework",

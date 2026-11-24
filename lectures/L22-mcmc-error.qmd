@@ -2,6 +2,8 @@
 
 {{< include ../_header.qmd >}}
 
+<!--
+
 ## Bias for MCMC
 
 Back in Lectures 3 and 4 we looked at the bias, variance, mean-square error and root-mean-square error for the Monte Carlo estimator
@@ -36,7 +38,7 @@ So here we can write
 $$ \Cov\big(\phi(X_i), \phi(X_j)\big) = \gamma(j - i) = \gamma(k) $$
 where $k = j - i$ is the number of steps between $i$ and $j$. Students who have studied time series will know that $\gamma(k)$ is called the **autocovariance** at **lag** $k$. (The prefix "auto-" mean "self-", and "lag" means something like a delay.)
 
-(The tempting hope that we might have $\gamma(k) = 0$ for $k \geq 2$ is not true. [EXPLAIN])
+(The tempting hope that we might have $\gamma(k) = 0$ for $k \geq 2$ is not true. Although $X_{i+2}$ and $X_i$ are conditionally inndependent given $X_{i+1}$, they are not independent. After all, $X_{i+2}$ depends on $X_{i+1}$, and $X_{i+1}$ depends on $X_i$, so $X_{i+2}$ and $X_i$ cannot be independent.)
 
 So now, in equilibrium, we have 
 \begin{align}
@@ -79,7 +81,7 @@ Let $(X_i)$ be a Markov chain started in its stationary distribution $\pi$, and 
 $$ \widehat\theta_n^{\mathrm{MC}} = \frac{1}{n} \sum_{i=1}^n \phi(X_i) .$$
 Then, writing $\sigma^2 = \Var(\phi(X))$, we have the following:
 
-* $\widehat\theta_n^{\mathrm{MC}}$ is unbiased, in that $\Exg \widehat\theta_n^{\mathrm{MC}} = \theta$.
+* $\widehat\theta_n^{\mathrm{MC}}$ is approximately unbiased, in that $\Exg \widehat\theta_n^{\mathrm{MC}} \approx \theta$.
 
 * The variance of $\widehat\theta_n^{\mathrm{MC}}$ is approximately
 $$ \Var \big( \widehat\theta_n^{\mathrm{MC}}\big) \approx \frac{\sigma^2}{n} \left(1 + 2 \sum_{k = 1}^{\infty} \rho(k) \right) . $$
@@ -141,7 +143,7 @@ round(c(sum_small, sum_medium, sum_big), 1)
 
 With the small and big step sizes, we need to take over 100 samples from the Markov chain to get the equivalent of one independent sample. But with the medium step size, we are getting the equivalent of one independent sample from roughly every 15 samples of the Markov chain.
 
-
+-->
 
 ::: mysummary
 **Summary:**
@@ -153,4 +155,4 @@ ${\displaystyle \approx \frac{\sigma^2}{n} \left(1 + 2 \sum_{k = 1}^{\infty} \rh
 
 - We want the autocorrelation $\rho(k)$ to decay as quickly as possible.
 
-**Read more:** [Voss, *An Introduction to Statistical Computing*](https://leeds.primo.exlibrisgroup.com/permalink/44LEE_INST/1fj430b/cdi_askewsholts_vlebooks_9781118728031), Subsection ?.?.?.
+**Read more:** [Voss, *An Introduction to Statistical Computing*](https://leeds.primo.exlibrisgroup.com/permalink/44LEE_INST/1eualh9/alma991020304181105181), Subsection 4.2.2.
