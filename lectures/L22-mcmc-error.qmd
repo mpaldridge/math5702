@@ -2,7 +2,7 @@
 
 {{< include ../_header.qmd >}}
 
-<!--
+
 
 ## Bias for MCMC
 
@@ -53,6 +53,8 @@ $$ \operatorname{Corr}\big(\phi(X_i),\phi(X_j)\big) = \frac{\operatorname{Cov}\b
 In equilibrium, this is
 $$ \rho(j - i) = \operatorname{Corr}\big(\phi(X_i),\phi(X_j)\big) = \frac{\gamma(j-i)}{\sqrt{\sigma^2\,\sigma^2}} = \frac{\gamma(j-i)}{\sigma^2}, $$
 where $\rho(k)$ is called the **autocorrelation** at lag $k$.
+
+*[**Correction:** Apparently, I may have forgotten some of the $\phi$s when I wrote down the autocovariance and autocorrelation in the lecture. Sorry!]*
 
 So now we have
 \begin{align}
@@ -143,7 +145,6 @@ round(c(sum_small, sum_medium, sum_big), 1)
 
 With the small and big step sizes, we need to take over 100 samples from the Markov chain to get the equivalent of one independent sample. But with the medium step size, we are getting the equivalent of one independent sample from roughly every 15 samples of the Markov chain.
 
--->
 
 ::: mysummary
 **Summary:**
